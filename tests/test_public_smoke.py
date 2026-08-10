@@ -793,7 +793,10 @@ class PublicPackageSmoke(unittest.TestCase):
         workflow = (REPO_ROOT / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
         self.assertIn("run: npm run typecheck\n", workflow)
         self.assertIn("run: npm run compositions\n", workflow)
-        self.assertIn("run: 'python -m pip install --dry-run --ignore-installed --only-binary=:all:", workflow)
+        install_step = "- name: Install locked test dependencies"
+        smoke_step = "- name: Run network-free smoke suite"
+        self.assertIn("run: 'python -m pip install --only-binary=:all:", workflow)
+        self.assertLess(workflow.index(install_step), workflow.index(smoke_step))
 
     def test_ci_paths_exist_and_executable_wrappers_are_tracked(self) -> None:
         workflow = (REPO_ROOT / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")

@@ -800,7 +800,10 @@ class PublicPackageSmoke(unittest.TestCase):
 
     def test_ci_paths_exist_and_executable_wrappers_are_tracked(self) -> None:
         workflow = (REPO_ROOT / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
+        attributes = (REPO_ROOT / ".gitattributes").read_text(encoding="utf-8")
         self.assertNotIn("prepare_framework", workflow)
+        self.assertIn("remotion_toolchain_package.json text eol=lf", attributes)
+        self.assertIn("remotion_toolchain_package-lock.json text eol=lf", attributes)
         for relative in ("install_skill.sh", "prepare_remotion.sh", "prepare_hyperframes.sh"):
             self.assertTrue((ROOT / "scripts" / relative).is_file(), relative)
         result = subprocess.run(
@@ -824,7 +827,8 @@ class PublicPackageSmoke(unittest.TestCase):
                 (cwd / log_name).write_text("ok\n", encoding="utf-8")
                 if log_name == "toolchain-install.log":
                     (cwd / "node_modules" / ".bin").mkdir(parents=True)
-                    (cwd / "node_modules" / ".bin" / "remotion.cmd").write_text("", encoding="utf-8")
+                    binary = "remotion.cmd" if os.name == "nt" else "remotion"
+                    (cwd / "node_modules" / ".bin" / binary).write_text("", encoding="utf-8")
 
             with mock.patch.object(prepare_module, "_inspect_toolchain", side_effect=[
                 {"ready": False, "state": "setup_required", "package": {}, "error": "missing"},
@@ -851,7 +855,8 @@ class PublicPackageSmoke(unittest.TestCase):
                 (cwd / log_name).write_text("ok\n", encoding="utf-8")
                 if log_name == "toolchain-install.log":
                     (cwd / "node_modules" / ".bin").mkdir(parents=True)
-                    (cwd / "node_modules" / ".bin" / "remotion.cmd").write_text("", encoding="utf-8")
+                    binary = "remotion.cmd" if os.name == "nt" else "remotion"
+                    (cwd / "node_modules" / ".bin" / binary).write_text("", encoding="utf-8")
 
             with mock.patch.object(prepare_module, "_inspect_toolchain", side_effect=[
                 broken,
@@ -1009,7 +1014,9 @@ class PublicPackageSmoke(unittest.TestCase):
         with tempfile.TemporaryDirectory(prefix="tutorial-re-ytdlp-route-") as directory:
             fake = Path(directory) / ("yt-dlp.exe" if os.name == "nt" else "yt-dlp")
             fake.write_text("", encoding="utf-8")
-            with mock.patch.object(runtime_tools.shutil, "which", return_value=str(fake)), mock.patch.object(
+            with mock.patch.object(runtime_tools, "_candidate_paths", return_value=[]), mock.patch.object(
+                runtime_tools.shutil, "which", return_value=str(fake)
+            ), mock.patch.object(
                 runtime_tools.importlib.util, "find_spec", return_value=object()
             ):
                 result = runtime_tools.resolve_tool("yt-dlp", python_module="yt_dlp")

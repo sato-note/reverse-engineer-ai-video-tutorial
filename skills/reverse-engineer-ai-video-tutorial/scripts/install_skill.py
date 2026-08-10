@@ -68,9 +68,13 @@ def main(argv: list[str] | None = None) -> int:
         source = _resolve_source(args.source)
         name = _skill_name(source)
         host, skills_root_raw, target_raw = _resolve_install_paths(args, name)
-        _validate_target(target_raw, skills_root_raw, name)
+        if skills_root_raw.is_symlink():
+            raise SystemExit(f"skills root symlink not allowed: {skills_root_raw}")
+        if target_raw.is_symlink():
+            raise SystemExit(f"target symlink not allowed: {target_raw}")
         skills_root = skills_root_raw.resolve()
         target = target_raw.resolve()
+        _validate_target(target, skills_root, name)
 
         if args.verify:
             result = verify_install(target, name)

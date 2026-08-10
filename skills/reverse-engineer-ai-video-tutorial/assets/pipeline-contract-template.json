@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "",
+  "guide_sha256": "",
+  "requested_action": "recreate",
+  "target_choice": "match",
+  "policy": "source-faithful-pipeline",
+  "framework_policy": "source_exact",
+  "requested_framework": "",
+  "framework_decision_contract": {
+    "default_requires_source_exact_match": true,
+    "explicit_request_requires_exact_match": true,
+    "generative_video_code_substitution_forbidden": true
+  },
+  "asset_policy": {
+    "raster_generator": "imagegen2",
+    "code_native": ["charts", "counters", "labels", "paths", "geometry"],
+    "generate_only_required": true
+  },
+  "tutorial_stages": [],
+  "selected_stages": []
+}

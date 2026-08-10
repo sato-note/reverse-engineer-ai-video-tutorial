@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "source_id": "",
+  "scope": "shared",
+  "references": [
+    {
+      "role": "master_style_sheet_source",
+      "kind": "source_reference",
+      "path": "",
+      "sha256": "",
+      "cache_origin": ""
+    }
+  ],
+  "prompts": [],
+  "assets": [],
+  "receipts": [],
+  "qa": [],
+  "status": "pending"
+}

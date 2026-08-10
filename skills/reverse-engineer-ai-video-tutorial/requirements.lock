@@ -1,0 +1,11 @@
+# Generated release lock. Exact pins. Bootstrap verifies lock SHA-256 + installed package versions.
+# yt-dlp upstream publishes date-build versions with .dev0 suffix; pin matches published build.
+certifi==2026.7.22
+charset-normalizer==3.4.9
+defusedxml==0.7.1
+idna==3.18
+Pillow==11.3.0
+requests==2.34.2
+urllib3==2.7.0
+youtube-transcript-api==1.2.4
+yt-dlp==2026.7.21.234255.dev0

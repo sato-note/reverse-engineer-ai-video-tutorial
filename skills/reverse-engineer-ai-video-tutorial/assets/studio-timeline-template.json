@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "composition_id": "",
+  "composition_component": "",
+  "root_file": "src/Root.tsx",
+  "component_source_file": "",
+  "source_files": [],
+  "elements": [],
+  "tracks": [],
+  "studio_verification": {
+    "status": "pending",
+    "screenshot_path": "",
+    "visible_track_names": []
+  }
+}

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node (Remotion template)
+node_modules/
+dist/
+out/
+.remotion/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Local evidence / media (never ship)
+cache/
+*.mp4
+*.mkv
+*.wav
+.remaining-fixes*/
+.env
+
+# Local agent memory (never ship)
+.hermes.md
+.install-receipt.json

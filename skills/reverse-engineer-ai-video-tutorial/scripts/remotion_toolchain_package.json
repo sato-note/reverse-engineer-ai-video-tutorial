@@ -1,0 +1,21 @@
+{
+  "name": "tutorial-remotion-shared-toolchain",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.489",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.489",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
+    "typescript": "5.9.2"
+  }
+}

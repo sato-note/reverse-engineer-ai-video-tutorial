@@ -1,0 +1,114 @@
+{
+  "schema_version": 3,
+  "source_id": "",
+  "scene_id": "",
+  "scene_doc": "",
+  "required_pre_provider_asset_ids": [
+    "source-style-sheet-01",
+    "section-02-scene-01-start-image"
+  ],
+  "shared_dependencies": [
+    {
+      "role": "master_style_sheet",
+      "kind": "source_reference_or_generated_asset",
+      "path": "",
+      "sha256": ""
+    }
+  ],
+  "reference_pack": {
+    "target_prompt_group_id": "",
+    "frames": [
+      {
+        "role": "start",
+        "availability": "available",
+        "path": "references/source-scene-start.jpg",
+        "sha256": "",
+        "source_evidence_path": "frames/source-scene-start.jpg",
+        "prompt_group_id": "",
+        "target_match": "pass",
+        "reviewer": "codex"
+      },
+      {
+        "role": "mid",
+        "availability": "unavailable",
+        "reason": "Not shown for this prompt-bound scene occurrence."
+      },
+      {
+        "role": "final",
+        "availability": "unavailable",
+        "reason": "Not shown for this prompt-bound scene occurrence."
+      }
+    ],
+    "motion_reference_status": "not_demonstrated",
+    "motion_reference_reason": "No motion sample is shown for this prompt-bound scene occurrence.",
+    "motion_samples": []
+  },
+  "references": [
+    {
+      "role": "source_prompt_full_frame",
+      "path": "",
+      "sha256": "",
+      "cache_origin": ""
+    },
+    {
+      "role": "source_prompt_approved_roi",
+      "path": "",
+      "sha256": "",
+      "cache_origin": "",
+      "crop_receipt_origin": "",
+      "crop_qa_origin": ""
+    }
+  ],
+  "prompts": [
+    {
+      "role": "recovered_source_image_prompt",
+      "path": "",
+      "sha256": ""
+    },
+    {
+      "role": "recovered_source_video_prompt",
+      "path": "",
+      "sha256": ""
+    }
+  ],
+  "input_assets": [],
+  "generated_assets": [
+    {
+      "asset_id": "source-style-sheet-01",
+      "role": "style_reference",
+      "path": "../_source-id/shared/assets/style-reference-sheet-v1.png",
+      "sha256": "",
+      "status": "approved",
+      "generation": {
+        "provider": "built-in ImageGen",
+        "model": "ImageGen2",
+        "prompt_path": "../_source-id/shared/prompts/style-reference-sheet-v1.txt",
+        "receipt_path": "../_source-id/shared/receipts/style-reference-sheet-v1.json",
+        "qa_path": "../_source-id/shared/qa/style-reference-sheet-v1.json"
+      }
+    },
+    {
+      "asset_id": "section-02-scene-01-start-image",
+      "role": "scene_start_image",
+      "path": "assets/scene-start-v1.png",
+      "sha256": "",
+      "status": "approved",
+      "generation": {
+        "provider": "built-in ImageGen",
+        "model": "ImageGen2",
+        "prompt_path": "prompts/scene-start-imagegen-v1.txt",
+        "receipt_path": "receipts/scene-start-imagegen-v1.json",
+        "qa_path": "qa/scene-start-imagegen-v1.json"
+      }
+    }
+  ],
+  "final_renders": [],
+  "receipts": [],
+  "qa": [],
+  "external_stage": {
+    "provider": "",
+    "model": "",
+    "submission": "not_submitted"
+  },
+  "status": "pending"
+}

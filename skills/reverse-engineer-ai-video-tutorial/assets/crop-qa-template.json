@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "purpose": "prompt",
+  "crop_path": "crops/prompt-roi.jpg",
+  "receipt_path": "crops/prompt-roi.jpg.crop.json",
+  "source_path": "frames/prompt-full.jpg",
+  "source_sha256": "",
+  "crop_sha256": "",
+  "inspection_method": "pending",
+  "inspection_sequence": "pending",
+  "blind_crop_observation": {
+    "dominant_content": "",
+    "visible_text": [],
+    "visual_anchors": [],
+    "unrelated_content": [],
+    "crop_fills_semantic_target": false
+  },
+  "source_context_observation": "",
+  "semantic_target": "",
+  "semantic_target_id": "",
+  "supported_scene_ids": [],
+  "target_state": "not_applicable",
+  "complete_scene_state": false,
+  "visible_fact_candidates": [],
+  "expected_content": [],
+  "observed_content": [],
+  "text_coverage": "pending",
+  "supported_evidence_items": [],
+  "status": "pending",
+  "reviewer": "",
+  "reviewed_at": "",
+  "verdict_rationale": "",
+  "checks": {
+    "source_context_verified": "pending",
+    "roi_matches_label": "pending",
+    "boundaries_complete": "pending",
+    "readable_at_output_resolution": "pending",
+    "no_required_content_clipped": "pending",
+    "no_mislabeled_adjacent_content": "pending"
+  },
+  "notes": "Inspect the saved crop alone first and record literal pixels. Only then open the full source and compare with the intended claim."
+}

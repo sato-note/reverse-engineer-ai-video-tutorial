@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reverse Engineer AI Video Tutorial"
+  short_description: "Recover guides and recreate exact tutorial scenes"
+  default_prompt: "Use $reverse-engineer-ai-video-tutorial to create a guide or recreate a named scene through its exact recovered pipeline."

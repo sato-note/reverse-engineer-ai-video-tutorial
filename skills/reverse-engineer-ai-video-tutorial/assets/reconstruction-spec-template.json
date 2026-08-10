@@ -1,0 +1,16 @@
+{
+  "schema_version": 2,
+  "run_id": "",
+  "guide_sha256": "",
+  "fidelity_mode": "reference_reconstruction",
+  "lifecycle_stage": "scene-planned",
+  "target_lock": {
+    "content": "",
+    "style": "",
+    "composition": "",
+    "typography": "",
+    "motion": "",
+    "immutable": true
+  },
+  "approved_deviations": []
+}

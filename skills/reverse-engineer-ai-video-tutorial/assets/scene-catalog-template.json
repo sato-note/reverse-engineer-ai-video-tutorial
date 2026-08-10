@@ -1,0 +1,201 @@
+{
+  "schema_version": 13,
+  "source_id": "",
+  "status": "pending",
+  "catalog_scope": "entire_tutorial",
+  "segmentation_policy": "semantic-boundary",
+  "analysis_passes": {
+    "high_level": "complete",
+    "detail": "pending"
+  },
+  "production_routes": [
+    {
+      "route_id": "route-source-exact",
+      "route": "reference-image-to-video",
+      "tool": "Exact demonstrated provider/model",
+      "tool_kind": "generative_video",
+      "framework_policy": "source_exact",
+      "evidence": ["frames/source-route.jpg"],
+      "required_capabilities": ["reference image", "video prompt"]
+    }
+  ],
+  "visual_count_claims": [],
+  "count_reconciliation": [],
+  "fact_claims": [],
+  "fact_reconciliation": [],
+  "workflow_assets": [
+    {
+      "asset_id": "source-style-sheet-01",
+      "role": "style_reference",
+      "source_visibility": "shown",
+      "reconstruction_policy": "exact_source",
+      "production_action": "imagegen_reconstruct",
+      "pipeline_role": "shared_input",
+      "source_kind": "composite_only",
+      "deliverable_kind": "generated_raster",
+      "text_bearing": false,
+      "text_extraction": "not_applicable",
+      "source_interval": [0, 1],
+      "evidence": ["frames/source-style-sheet-full.jpg"],
+      "evidence_bindings": [
+        {
+          "path": "frames/source-style-sheet-full.jpg",
+          "evidence_role": "shown_input",
+          "observation": "The source visibly supplies this style sheet to the demonstrated production workflow."
+        }
+      ],
+      "production_use_evidence": ["frames/source-style-sheet-full.jpg"],
+      "crop_evidence": ["crops/source-style-sheet.jpg"],
+      "consumed_by_scene_ids": ["section-02-scene-01"]
+    },
+    {
+      "asset_id": "section-02-scene-01-start-image",
+      "role": "scene_start_image",
+      "source_visibility": "shown",
+      "reconstruction_policy": "exact_source",
+      "production_action": "imagegen_reconstruct",
+      "pipeline_role": "input",
+      "source_kind": "composite_only",
+      "deliverable_kind": "generated_raster",
+      "text_bearing": false,
+      "text_extraction": "not_applicable",
+      "source_interval": [1, 2],
+      "evidence": ["frames/section-02-scene-01.jpg"],
+      "evidence_bindings": [
+        {
+          "path": "frames/section-02-scene-01.jpg",
+          "evidence_role": "shown_input",
+          "observation": "The source visibly supplies this scene-start image to the demonstrated video route."
+        }
+      ],
+      "production_use_evidence": ["frames/section-02-scene-01.jpg"],
+      "crop_evidence": ["crops/section-02-scene-01-start.jpg"],
+      "consumed_by_scene_ids": ["section-02-scene-01"]
+    },
+    {
+      "asset_id": "section-02-scene-01-target",
+      "role": "scene_target_reference",
+      "source_visibility": "shown",
+      "reconstruction_policy": "exact_source",
+      "production_action": "reuse_source",
+      "pipeline_role": "target_reference",
+      "target_state": "representative_result",
+      "source_kind": "reference_only",
+      "deliverable_kind": "reference_only",
+      "text_bearing": false,
+      "text_extraction": "not_applicable",
+      "source_interval": [1, 2],
+      "evidence": ["frames/section-02-scene-01-target.jpg"],
+      "evidence_bindings": [
+        {
+          "path": "frames/section-02-scene-01-target.jpg",
+          "evidence_role": "target_output",
+          "observation": "The frame shows the representative completed scene used only as a comparison target."
+        }
+      ],
+      "production_use_evidence": [],
+      "crop_evidence": ["crops/section-02-scene-01-target.jpg"],
+      "consumed_by_scene_ids": ["section-02-scene-01"]
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "section-01",
+      "title": "",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "summary": "",
+      "role": "context",
+      "detail_level": "overview",
+      "evidence": ["frames/section-01.jpg"],
+      "observed_unit_count": 0,
+      "cataloged_scene_count": 0,
+      "source_units": [],
+      "scenes": []
+    },
+    {
+      "section_id": "section-02",
+      "title": "",
+      "start_seconds": 1,
+      "end_seconds": 2,
+      "summary": "",
+      "role": "workflow_breakdown",
+      "detail_level": "workflow_detail",
+      "focus_reason": "Transcript identifies this section as production breakdown for showcased output.",
+      "evidence": ["frames/section-02-scene-01.jpg"],
+      "sequence_kind": "single_scene",
+      "segmentation_status": "complete",
+      "coverage_tolerance_seconds": 1,
+      "observed_unit_count": 1,
+      "cataloged_scene_count": 1,
+      "unresolved_units": [],
+      "prompt_groups": [
+        {
+          "prompt_group_id": "section-02-prompt-01",
+          "prompt_extraction": "detailed_paraphrase",
+          "prompt_text": "Describe the complete visible prompt faithfully, preserving its subject, setting, composition, lighting, camera, motion, style, and negative constraints.",
+          "prompt_evidence": ["crops/section-02-prompt-01.jpg"],
+          "scene_ids": ["section-02-scene-01"]
+        }
+      ],
+      "source_units": [
+        {
+          "unit_id": "section-02-unit-01",
+          "unit_kind": "prompt_result_pair",
+          "change_types": ["section_start"],
+          "start_seconds": 1,
+          "end_seconds": 2,
+          "evidence": ["frames/section-02-scene-01.jpg"],
+          "evidence_items": ["section-02-unit-01"],
+          "disposition": "cataloged",
+          "scene_ids": ["section-02-scene-01"],
+          "rationale": ""
+        }
+      ],
+      "change_points": [],
+      "scenes": [
+        {
+          "scene_id": "section-02-scene-01",
+          "title": "",
+          "start_seconds": 1,
+          "end_seconds": 2,
+          "evidence": ["frames/section-02-scene-01.jpg"],
+          "reference_frames": ["frames/section-02-scene-01.jpg"],
+          "description": "",
+          "composition": "",
+          "motion_order": [""],
+          "camera": "",
+          "text": ["none observed"],
+          "audio": ["none observed"],
+          "scene_kind": "output_scene",
+          "recreate_addressable": true,
+          "route": "reference-image-to-video",
+          "production_route_id": "route-source-exact",
+          "source_occurrences": [
+            {
+              "section_id": "section-02",
+              "start_seconds": 1,
+              "end_seconds": 2,
+              "occurrence_kind": "final_result",
+              "purpose": "finished result evidence",
+              "evidence": ["frames/section-02-scene-01.jpg"],
+              "fact_review": {
+                "status": "complete",
+                "reviewed_evidence": ["frames/section-02-scene-01.jpg"],
+                "visible_fact_candidates": []
+              }
+            }
+          ],
+          "input_asset_ids": ["source-style-sheet-01", "section-02-scene-01-start-image"],
+          "required_asset_ids": ["source-style-sheet-01", "section-02-scene-01-start-image"],
+          "target_reference_asset_ids": ["section-02-scene-01-target"],
+          "required_pre_provider_asset_ids": ["source-style-sheet-01", "section-02-scene-01-start-image"],
+          "prompt_reconstruction": "",
+          "prompt_evidence": [],
+          "prompt_extraction": "unknown",
+          "confidence": "low"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "",
+  "scene_id": "",
+  "role": "",
+  "semantic_type": "person",
+  "route": "image_generation",
+  "generation_intent": "source_asset_reconstruction",
+  "reference_input_type": "composite_frame",
+  "reference_paths": [],
+  "reference_image_paths": [],
+  "source_lock": {
+    "layout": true,
+    "section_inventory": true,
+    "readable_text": true,
+    "palette_materials": true
+  },
+  "exact_prompt": "",
+  "negative_constraints": [],
+  "provider_intent": {
+    "provider": "built-in ImageGen",
+    "model": "imagegen2",
+    "capability": "image_edit",
+    "quality_policy": "highest_available",
+    "reasoning_effort": "not_exposed_by_image_tool",
+    "cost": "announce before call"
+  },
+  "postprocess": [
+    "alpha-bound crop",
+    "resize",
+    "encode"
+  ],
+  "target": {
+    "width": 0,
+    "height": 0,
+    "alpha": true
+  },
+  "status": "planned",
+  "generation_receipt": {
+    "provider": "built-in ImageGen",
+    "model": "imagegen2",
+    "tool_call_id": "",
+    "prompt_sha256": "",
+    "reference_sha256s": []
+  }
+}

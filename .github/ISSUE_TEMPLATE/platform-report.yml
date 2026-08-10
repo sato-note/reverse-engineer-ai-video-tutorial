@@ -1,0 +1,55 @@
+name: Platform report
+description: Report install or capability result from Windows, macOS, Linux, or WSL.
+title: "platform: "
+labels: [platform-report]
+body:
+  - type: input
+    id: os
+    attributes:
+      label: OS and version
+      placeholder: Windows 11 24H2 / Ubuntu 24.04 / macOS 15
+    validations:
+      required: true
+  - type: input
+    id: architecture
+    attributes:
+      label: Architecture
+      placeholder: x64 / arm64
+    validations:
+      required: true
+  - type: input
+    id: shell
+    attributes:
+      label: Shell
+      placeholder: PowerShell 7 / zsh / bash
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host
+      placeholder: Codex / Cursor / standalone
+    validations:
+      required: true
+  - type: textarea
+    id: install
+    attributes:
+      label: Install command
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Doctor JSON
+      description: Redact paths, usernames, tokens, and private URLs.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs
+      render: text
+    validations:
+      required: true

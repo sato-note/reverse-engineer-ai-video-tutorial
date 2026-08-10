@@ -1,0 +1,59 @@
+{
+  "schema_version": 4,
+  "source_id": "",
+  "status": "complete",
+  "tutorial_summary": "",
+  "showcased_output": "",
+  "source_count_claims": [
+    {
+      "count": 1,
+      "label": "scenes",
+      "scope": "showcased output",
+      "timestamp": 0,
+      "text": "Source count claim or empty list when absent."
+    }
+  ],
+  "detailed_workflow_present": true,
+  "no_detail_reason": "",
+  "sections": [
+    {
+      "section_id": "section-01",
+      "title": "",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "summary": "",
+      "role": "workflow_breakdown",
+      "selection_reason": "",
+      "transcript_evidence": [
+        {
+          "start_seconds": 0,
+          "text": "Detailed paraphrase of transcript cue."
+        }
+      ]
+    }
+  ],
+  "detail_pass": [
+    {
+      "section_id": "section-01",
+      "reason": "Section explains how showcased output was produced.",
+      "questions": [
+        "Which prompts, settings, assets, and result scenes form workflow?"
+      ],
+      "status": "planned"
+    }
+  ],
+  "tail_coverage": {
+    "status": "complete",
+    "section_id": "section-01",
+    "start_seconds": 0,
+    "end_seconds": 1,
+    "disposition": "mapped_content",
+    "summary": "The closing source content is semantically included in the final mapped section.",
+    "transcript_evidence": [
+      {
+        "start_seconds": 0,
+        "text": "Detailed paraphrase of the final source content."
+      }
+    ]
+  }
+}

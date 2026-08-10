@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "status": "pending",
+  "reference_paths": [],
+  "output_path": "",
+  "output_sha256": "",
+  "observations": [],
+  "asset_results": [],
+  "source_reconstruction_gate_contract": [
+    "layout_structure",
+    "section_inventory",
+    "readable_text",
+    "palette_materials",
+    "ui_cleanup"
+  ],
+  "gates": {
+    "identity": "pending",
+    "silhouette": "pending",
+    "style": "pending",
+    "transparency": "pending",
+    "composition": "pending",
+    "typography": "pending"
+  }
+}

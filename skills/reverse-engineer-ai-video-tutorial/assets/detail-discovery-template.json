@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "ranges": [
+    {
+      "section_id": "section-01",
+      "start_seconds": 0,
+      "end_seconds": 1,
+      "method": "adaptive_scene_change",
+      "threshold": 0.2,
+      "change_points": [],
+      "candidate_timestamps": [0, 0.75],
+      "status": "pending",
+      "resolutions": [
+        {
+          "timestamp": 0,
+          "unit_id": "section-01-unit-01",
+          "disposition": "scene",
+          "observation": ""
+        }
+      ]
+    }
+  ]
+}

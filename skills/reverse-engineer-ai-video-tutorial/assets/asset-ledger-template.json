@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "status": "planning",
+  "lifecycle_stage": "scene-planned",
+  "guide_sha256": "",
+  "run_id": "",
+  "fidelity_mode": "reference_reconstruction",
+  "provider_submission": "not_authorized",
+  "provider_authorization": {
+    "status": "not_authorized",
+    "provider": "",
+    "model": "",
+    "cost": "",
+    "inputs": [],
+    "owner": ""
+  },
+  "assets": [],
+  "prompts": []
+}

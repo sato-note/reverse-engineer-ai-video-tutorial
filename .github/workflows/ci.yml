@@ -31,7 +31,7 @@ jobs:
       - name: Validate stdlib-only doctor
         run: python -S skills/reverse-engineer-ai-video-tutorial/scripts/run.py doctor --profile base --allow-missing --json
       - name: Resolve locked binary wheels
-        run: python -m pip install --dry-run --ignore-installed --only-binary=:all: --no-cache-dir -r skills/reverse-engineer-ai-video-tutorial/requirements.lock
+        run: 'python -m pip install --dry-run --ignore-installed --only-binary=:all: --no-cache-dir -r skills/reverse-engineer-ai-video-tutorial/requirements.lock'
       - name: Check managed runtime plan
         run: python skills/reverse-engineer-ai-video-tutorial/scripts/bootstrap_runtime.py --plan --json
       - name: Check managed runtime repair

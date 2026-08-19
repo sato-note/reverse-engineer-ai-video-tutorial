@@ -6,8 +6,6 @@ Guides can also serve as production systems for new work while keeping source ev
 
 Watch the [10-minute YouTube walkthrough](https://www.youtube.com/watch?v=sEfhY-ICW_M&t=272s) for a detailed explanation.
 
-Release [`0.0.1`](skills/reverse-engineer-ai-video-tutorial/VERSION) · [`MIT`](LICENSE)
-
 ![reverse-engineer-ai-video-tutorial workflow demo](.github/assets/rev-eng-demo.gif)
 
 ## Install with an agent — recommended

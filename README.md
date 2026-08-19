@@ -4,7 +4,7 @@ Evidence-backed Cursor / Codex skill for turning AI video tutorials into reusabl
 
 Guides can also serve as production systems for new work while keeping source evidence separate from generated content.
 
-Watch the [10-minute YouTube walkthrough](https://www.youtube.com/watch?v=VIDEO_ID) for a detailed explanation.
+Watch the [10-minute YouTube walkthrough](https://www.youtube.com/watch?v=sEfhY-ICW_M&t=272s) for a detailed explanation.
 
 Release [`0.0.1`](skills/reverse-engineer-ai-video-tutorial/VERSION) · [`MIT`](LICENSE)
 
@@ -15,13 +15,13 @@ Release [`0.0.1`](skills/reverse-engineer-ai-video-tutorial/VERSION) · [`MIT`](
 Codex:
 
 ```text
-Install this skill for Codex: <GitHub repository URL>
+Install this skill for Codex: https://github.com/sato-note/reverse-engineer-ai-video-tutorial
 ```
 
 Cursor:
 
 ```text
-Install this skill for Cursor: <GitHub repository URL>
+Install this skill for Cursor: https://github.com/sato-note/reverse-engineer-ai-video-tutorial
 ```
 
 When repository already is current agent context, omit URL:
@@ -59,7 +59,7 @@ py -3 skills/reverse-engineer-ai-video-tutorial/scripts/install_skill.py --sourc
 For immutable GitHub provenance, clone exact release tag with Git metadata intact:
 
 ```powershell
-git clone --branch v0.0.1 --depth 1 <GitHub URL> reverse-engineer-ai-video-tutorial
+git clone --branch v0.0.1 --depth 1 https://github.com/sato-note/reverse-engineer-ai-video-tutorial reverse-engineer-ai-video-tutorial
 py -3 reverse-engineer-ai-video-tutorial/skills/reverse-engineer-ai-video-tutorial/scripts/install_skill.py --source reverse-engineer-ai-video-tutorial --host shared --github --json
 ```
 
@@ -92,8 +92,8 @@ Manual path retains full runtime, framework, update, rollback, and troubleshooti
 
 | Host | Status |
 |---|---|
-| Windows | Maintainer-verified: install, doctor, runtime, spaced/Unicode paths, rollback, Remotion smoke. |
-| macOS/Linux/WSL | Implemented to platform standards; maintainer-untested. |
+| Windows | Verified: install, doctor, runtime, spaced/Unicode paths, rollback, Remotion smoke. |
+| macOS/Linux/WSL | Implemented to platform standards; untested. |
 
 The agent checks only the selected workflow; missing optional capabilities do not block other routes.
 

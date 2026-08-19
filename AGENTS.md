@@ -1,5 +1,7 @@
 # Agent install contract
 
+GitHub publication work must read [`PUBLISH_GUIDE.md`](PUBLISH_GUIDE.md) first. Work repos use `sato-note` Git identity plus `github-work` SSH alias. Default `gh` login is personal; do not use it for work-repo mutations.
+
 Use this file when user asks to install this repository’s skill for Codex, Cursor, or shared agent storage.
 
 ## Required sequence
